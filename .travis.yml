@@ -5,7 +5,7 @@ before_install:
   - docker build -t rishikant42/multi-docker-app -f ./client/Dockerfile.dev ./client
 
 scripts:
-  - docker -e CI=true run ishikant42/multi-docker-app npm test
+  - docker -e CI=true run rishikant42/multi-docker-app npm test
 
 after_success:
   - docker build -t rishikant42/multi-client ./client
